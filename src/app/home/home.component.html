@@ -1,0 +1,57 @@
+<div class="section-indicators">
+  <span class="indicator" [class.active]="currentSectionIndex === 0"></span>
+  <span class="indicator" [class.active]="currentSectionIndex === 1"></span>
+  <span class="indicator" [class.active]="currentSectionIndex === 2"></span>
+  <!-- Add more indicators for more sections -->
+</div>
+
+<section id="section1" class="hero-section">
+  <video autoplay muted loop id="myVideo">
+    <source src="/assets/rhlast.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="content">
+    <img src="/assets/logo1.png" alt="Logo" class="logo">
+  </div>
+</section>
+
+<section id="projects-carousel">
+  <h2 class="carousel-title">Our Projects</h2>
+  <div class="swiper mySwiperProjects" #swiperProjects>
+    <div class="swiper-wrapper">
+      <!-- Repeat this block for each project slide -->
+      <div class="swiper-slide">
+        <img src="assets/projectRef.png" alt="Project 1">
+        <div class="project-details">
+          <h3>Project Title 1</h3>
+          <p>Brief description of the project goes here...</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</section>
+
+<section id="section2" class="collection">
+  <h2 class="carousel-title">Meet our team</h2>
+  <div class="swiper mySwiper" #swiperRef>
+    <div class="swiper-wrapper">
+      <div *ngFor="let member of teamMembers" class="swiper-slide team-card" (click)="toggleBlur(member)">
+        <img [src]="member.imageUrl" alt="{{ member.name }}">
+        <div class="card-overlay" [ngClass]="{'blurred': member.detailsVisible}">
+          <div class="text-content" *ngIf="member.detailsVisible">
+            <h3>{{ member.name }}</h3>
+            <p>{{ member.role }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+
+
+<section id="section3"></section>

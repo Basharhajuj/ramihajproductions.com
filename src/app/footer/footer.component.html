@@ -1,0 +1,39 @@
+<footer class="footer">
+    <div class="footer-container">
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/projects">Projects</a></li>
+          <li><a routerLink="/services">Services</a></li>
+          <li *ngIf="isAdminLoggedIn()"><a routerLink="/admin">Admin</a></li>
+          <li><a routerLink="/about">About Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Contact Information -->
+      <div class="footer-column">
+        <h3>Contact Us</h3>
+        <p>Sheikh se'ed st, Kaukab abu el-hija</p>
+        <p>Email: <a href="mailto:ramihajproductions@gmail.com">ramihajproductions&#64;gmail.com</a></p>
+        <p>Phone: +972 54-392-0640</p>
+      </div>
+  
+      <!-- Social Media Links -->
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p routerLink="/admin-login">© 2024 RamiHajProduction. All rights reserved.</p>
+    </div>
+  </footer>
+  
