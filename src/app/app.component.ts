@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationStart, NavigationEnd, NavigationCancel } from '@angular/router';
-import { LoaderService } from './loader.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-root',
@@ -11,21 +11,9 @@ export class AppComponent implements OnInit {
 
   isLoading: boolean = false;
 
-  constructor(private router: Router, private loaderService: LoaderService) {
-    // Show loader during navigation start
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationStart) {
-        this.loaderService.show();
-      } else if (event instanceof NavigationEnd || event instanceof NavigationCancel) {
-        this.loaderService.hide();
-      }
-    });
+  constructor(private router: Router,private spinner: NgxSpinnerService) {}
 
-    // Subscribe to the loader service
-    this.loaderService.isLoading$.subscribe(loading => {
-      this.isLoading = loading;
-    });
-  }
+  
 
   ngOnInit() {
     this.router.events.subscribe(event => {
@@ -33,5 +21,9 @@ export class AppComponent implements OnInit {
         this.showFooter = !['/admin-login', '/admin/reels', '/admin/vfx'].includes(event.urlAfterRedirects);
       }
     });
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 5000);
   }
 }

@@ -23,6 +23,9 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -49,7 +52,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ReactiveFormsModule,
     AppRoutingModule,
     DirectivesModule,
-    RouterModule
+    RouterModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule
     ],
   providers: [ provideHttpClient(withInterceptorsFromDi()),LoaderService],
   bootstrap: [AppComponent],
