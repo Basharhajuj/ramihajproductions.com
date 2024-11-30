@@ -28,7 +28,6 @@ export class AppComponent implements OnInit {
       ) {
         this.spinner.hide();
       }
-
       // Toggle footer visibility
       if (event instanceof NavigationEnd) {
         this.showFooter = !['/admin-login', '/admin/reels', '/admin/vfx'].includes(event.urlAfterRedirects);
