@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth; /* This enables smooth scrolling for section jumps */
+  scroll-behavior: smooth; 
 }
 
 body {
@@ -7,7 +7,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 .section {
-  height: 100vh; /* Full screen sections */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,27 +19,27 @@ body {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adjust space between indicators */
-  z-index: 1000; /* Make sure this is higher than the Swiper */
+  gap: 20px; 
+  z-index: 1000; 
 }
 
 .indicator {
-  width: 10px; /* Normal size of the dot */
-  height: 10px; /* Normal size of the dot */
+  width: 10px;
+  height: 10px; 
   border-radius: 5px;
-  background-color: #ccc; /* Inactive color */
+  background-color: #ccc; 
   transition: all 0.3s ease-in-out;
 }
 
 .indicator.active {
-  width: 10px; /* Extended width for the active section */
-  height: 40px; /* Keep the height the same for extended dot */
-  background-color: #fff; /* Active color */
+  width: 10px; 
+  height: 40px; 
+  background-color: #fff; 
 }
 
 .hero-section {
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,14 +67,14 @@ body {
 }
 .fullPageSwiper {
   width: 100%;
-  height: 100vh; // Full viewport height for snap-scrolling effect
+  height: 100vh; 
 }
 
 .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; // Full viewport height for each section
+  height: 100vh; 
 }
 
 
@@ -94,7 +94,7 @@ body {
 
 .swiper.mySwiperProjects {
   width: 80%;
-  height: 600px; /* Adjust the height for the projects carousel */
+  height: 600px; 
 }
 
 .swiper-slide {
@@ -129,17 +129,17 @@ body {
 
 
 .collection {
-  height: 100vh; /* Full viewport height */
+  height: 100vh; 
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centers content vertically */
-  align-items: center; /* Centers content horizontally */
+  justify-content: center; 
+  align-items: center; 
   background-color: #000000;
 }
 
 .carousel-title {
   font-size: 2.5rem;
-  margin-bottom: 30px; /* Reduced margin for better alignment */
+  margin-bottom: 30px; 
   color: #ffffff;
   text-align: center;
 }
@@ -147,7 +147,7 @@ body {
 .mySwiper {
   width: 90%;
   max-width: 1200px;
-  height: 500px; /* Adjust the height for the carousel */
+  height: 500px; 
   display: flex;
   justify-content: center;
 }
@@ -172,14 +172,13 @@ body {
   object-fit: cover;
 }
 
-/* Card Overlay */
 .card-overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 75%;
   display: flex;
-  align-items: flex-end; /* Align the text to the bottom */
+  align-items: flex-end; 
   justify-content: center;
   transition: all 0.5s ease-in-out;
   padding: 10px;
@@ -190,21 +189,19 @@ body {
   background: rgba(0, 0, 0, 0.6);
 }
 
-/* Text Content for Blurred Card */
 .text-content {
   color: white;
   text-align: center;
   font-size: 1.1rem;
 }
 
-/* Ensuring Text is visible when blurred */
 .card-overlay.blurred .text-content {
   opacity: 1;
 }
 
 
 
-/* Swiper Pagination and Navigation styles */
+
 .swiper-pagination-bullet {
   background-color: #fff;
 }
@@ -221,14 +218,14 @@ body {
   }
 
   .mySwiper {
-    height: 500px; /* Increase the height slightly to ensure a good fit without top space */
+    height: 500px; 
 
     .team-card {
       width: 240px;
       height: 400px;
 
       img {
-        height: 100%; /* Adjust the image height to retain visual proportions */
+        height: 100%; 
         width: 100%;
         object-fit: cover;
       }
@@ -251,27 +248,27 @@ body {
 
 @media (max-width: 768px) {
   .mySwiper {
-    height: 100vh; /* Full viewport height to eliminate top space */
+    height: 100vh; 
     display: flex;
-    align-items: center; /* Ensure swiper container centers the slides vertically */
+    align-items: center; 
 
     .swiper-slide {
-      height: 100%; /* Occupy the full height of the swiper */
+      height: 100%; 
       display: flex;
-      align-items: center; /* Center card content vertically */
-      justify-content: center; /* Center card content horizontally */
+      align-items: center; 
+      justify-content: center; 
     }
 
     .team-card {
       width: 200px;
       height: 500px;
       img {
-        height: 100%; /* Use full height to eliminate top space */
-        width: 100%; /* Keep the full width for consistency */
-        object-fit: cover; /* Make sure the image fits without leaving extra space */
+        height: 100%; 
+        width: 100%;
+        object-fit: cover; 
       }
       .card-overlay {
-        height: 100%; /* Full blur effect for mobile */
+        height: 100%;
       }
 
       .text-content h3 {
@@ -290,12 +287,12 @@ body {
 }
 @media (max-width: 480px) {
   .mySwiper {
-    height: 100vh; /* Full viewport height */
+    height: 100vh; 
 
     .swiper-slide {
-      height: 100%; /* Take full height */
+      height: 100%; 
       display: flex;
-      align-items: center; /* Center card vertically */
+      align-items: center;
       justify-content: center;
     }
 
@@ -304,11 +301,11 @@ body {
       height: 450px;
 
       .card-overlay {
-        height: 100%; /* Full blur effect for mobile */
+        height: 100%; 
       }
 
       img {
-        height: 100%; /* Fill height without leaving space */
+        height: 100%; 
       }
 
       .text-content h3 {

@@ -80,11 +80,11 @@
 .sidebar-title {
   font-size: 2rem;
   color: white;
-  margin-bottom: 30px; /* Space between the title and the buttons */
+  margin-bottom: 30px; 
   text-align: center;
 }
 
-/* Animation for list items */
+
 .sidebar ul {
   list-style: none;
   padding: 0;
@@ -107,7 +107,7 @@
 }
 
 
-/* Add a delay for each item to create a staggered effect */
+
 .sidebar ul li:nth-child(1) {
   transition-delay: 0.4s; 
 }
@@ -160,35 +160,35 @@
   
 
   &.white-navbar {
-    background: rgba(255, 255, 255, 0.5); /* Semi-transparent with blur */
+    background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(15px);
     height: 4%;
     
     .line {
-      stroke: black; /* Adjust line colors for white navbar */
+      stroke: black;
     }
 
     .navbar-links a {
-      color: #fff; /* Or any color you'd like for the link */
+      color: #fff; 
       text-decoration: none; 
       
     }
   }
   .navbar-links a {
-    color: #fff; /* Or any color you'd like for the link */
+    color: #fff; 
     text-decoration: none; 
     
   }
 }
 .navbar.white-navbar ~ .navbar-underline {
-  display: none; /* Hide the underline */
+  display: none; 
 }
 
-/* White links styling for the navbar */
+
 .white-links {
   color: black !important;
 }
-/* Adjust the size of your logo */
+
 .navbar-logo img {
   height: 50px;
   width: auto;
@@ -197,17 +197,16 @@
 
 .navbar-links {
   position: relative;
-  z-index: 200; /* Keep it above the navbar */
+  z-index: 200; 
   margin-left: 8.91%;
 }
 
 
-/* Change color on hover */
 .navbar-links a:hover {
   color: #ccc;
 }
 
-/* Underline beneath navbar */
+
 .navbar-underline {
   flex-basis: 100%;
   left: 10%;
@@ -215,10 +214,10 @@
   height: 0.6px; /* Thin line */
   background-color: #dddddd71;
   box-shadow: rgba(34, 34, 34, 0.8) 0 0 90px 90px;
-  /* Transparent white line */
+ 
   position: fixed;
-  top: 120px; /* Offset from navbar */
-  z-index: 50; /* Make sure it's under the navbar */
+  top: 120px; 
+  z-index: 50; 
 }
 
 /* Responsive adjustments */
@@ -236,10 +235,10 @@
   }
 
   .menu {
-    z-index: 1000; /* Keep the button above the sidebar */
-     /* Ensure it's fixed */
-    top: 20px; /* Adjust the top position as needed */
-    right: 20px; /* Adjust the right position */
+    z-index: 1000; 
+     
+    top: 20px; 
+    right: 20px; 
   }
 
   .navbar-underline {
@@ -248,8 +247,8 @@
   }
 
   .sidebar {
-    width: 75vw; /* Adjust this value to ensure the button remains visible */
-    z-index: 999; /* Keep lower than the button's z-index */
+    width: 75vw; 
+    z-index: 999; 
   }
 
   .sidebar-content {
