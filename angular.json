@@ -45,8 +45,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/swiper/swiper-bundle.min.css",
-              "node_modules/ngx-spinner/animations/ball-beat.css"
+              "node_modules/swiper/swiper-bundle.min.css"
 
             ],
             "scripts": [
@@ -113,8 +112,7 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/swiper/swiper-bundle.min.css",
-              "node_modules/ngx-spinner/animations/ball-beat.css" 
+              "node_modules/swiper/swiper-bundle.min.css" 
             ],
             "scripts": [
               "node_modules/swiper/swiper-bundle.min.js"
