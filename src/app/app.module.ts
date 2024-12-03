@@ -10,7 +10,6 @@ import { DirectivesModule } from '../directives/directives.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ServicesComponent } from './services/services.component';
 import { LoaderComponent } from './loader/loader.component';
-import { LoaderService } from './loader.service';
 import { ReelsComponent } from './reels/reels.component';
 import { AdminReelsPageComponent } from './admin-reels-page/admin-reels-page.component';
 import { ReelsDetailsComponent } from './reels-details/reels-details.component';
@@ -23,7 +22,6 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -53,10 +51,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     DirectivesModule,
     RouterModule,
-    BrowserAnimationsModule,
-    NgxSpinnerModule
+    BrowserAnimationsModule
     ],
-  providers: [ provideHttpClient(withInterceptorsFromDi()),LoaderService],
+  providers: [ provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

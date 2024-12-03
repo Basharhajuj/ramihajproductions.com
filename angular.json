@@ -47,6 +47,7 @@
               "src/styles.scss",
               "node_modules/swiper/swiper-bundle.min.css",
               "node_modules/ngx-spinner/animations/ball-beat.css"
+
             ],
             "scripts": [
               "node_modules/swiper/swiper-bundle.min.js"
@@ -63,21 +64,15 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "4kB",
-                  "maximumError": "5kB"
+                  "maximumError": "4kB"
                 }
               ],
-              "outputHashing": "all",
-              "optimization": {
-                "styles": true
-              },
-              "sourceMap": false,
-              "extractLicenses": true
+              "outputHashing": "all"
             },
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true,
-              "watch": true
+              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -119,7 +114,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/swiper/swiper-bundle.min.css",
-              "node_modules/ngx-spinner/animations/ball-beat.css"
+              "node_modules/ngx-spinner/animations/ball-beat.css" 
             ],
             "scripts": [
               "node_modules/swiper/swiper-bundle.min.js"
