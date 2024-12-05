@@ -1,6 +1,6 @@
 <nav class="navbar" [ngClass]="{'white-navbar': isWhiteNavbar}">
   <div class="navbar-links">
-    <a href="#about" [ngClass]="{'white-links': isWhiteNavbar}">About Us</a>
+    <a href="/about" [ngClass]="{'white-links': isWhiteNavbar}">About Us</a>
   </div>
 
   <div class="navbar-logo">
@@ -22,9 +22,9 @@
   <div class="sidebar-content">
     <h2 class="sidebar-title">Menu</h2>
     <ul>
-      <li><a href="#projects-carousel" (click)="toggleSidebar()">About Us</a></li>
+      <li><a href="/projects-carousel" (click)="toggleSidebar()">About Us</a></li>
       <li><a routerLink="/services" (click)="toggleSidebar()">Services</a></li>
-      <li><a href="#contact" (click)="toggleSidebar()">Contact</a></li>
+      <li><a href="/contact" (click)="toggleSidebar()">Contact</a></li>
       <a *ngIf="isAdminLoggedIn()" routerLink="/admin" [ngClass]="{'white-links': isWhiteNavbar}">Admin Page</a>
     </ul>
   </div>

@@ -1,29 +1,76 @@
 .not-found-container {
-    text-align: center;
-    margin-top: 10%;
-    
-    h1 {
-      font-size: 4rem;
-      margin-bottom: 1rem;
-    }
+  text-align: center;
+  margin-top: 10%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh; // Ensure the content is centered in the viewport
   
-    p {
-      font-size: 1.5rem;
-      margin-bottom: 2rem;
-    }
-  
-    button {
-      padding: 0.8rem 1.5rem;
-      font-size: 1rem;
-      color: #fff;
-      background-color: #007bff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #0056b3;
-      }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 80%;
+    height: auto;
+    margin: 20px 0; // Add some margin to space out the content
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #0056b3;
     }
   }
-  
+
+  // Media queries for responsiveness
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    button {
+      font-size: 0.9rem;
+      padding: 0.6rem 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    button {
+      font-size: 0.8rem;
+      padding: 0.5rem 1rem;
+    }
+
+    img {
+      max-width: 100%; // Ensure image takes up available space on small screens
+    }
+  }
+}

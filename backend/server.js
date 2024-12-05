@@ -18,7 +18,7 @@ if (!process.env.JWT_SECRET) {
 }
 
 // Middleware
-app.use(cors());
+app.use(cors({origin: 'https://ramihajproductions.com'}));
 app.use(bodyParser.json());
 
 // MongoDB connection
