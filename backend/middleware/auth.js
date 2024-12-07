@@ -1,20 +1,36 @@
-//middleware/auth.js
+const express = require('express');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const AdminUser = require('../models/adminUser');
 
-const verifyAdmin = (req, res, next) => {
-  const token = req.header('Authorization').replace('Bearer ', '');
+const router = express.Router();
 
-  if (!token) {
-    return res.status(403).json({ message: 'Access denied. No token provided.' });
-  }
+// Login route
+router.post('/login', async (req, res) => {
+  console.log('Login endpoint hit');
+  const { username, password } = req.body;
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
-    req.admin = decoded;
-    next();
-  } catch (error) {
-    res.status(400).json({ message: 'Invalid token.' });
-  }
-};
+    const admin = await AdminUser.findOne({ username });
+    if (!admin) {
+      return res.status(404).json({ message: 'Invalid credentials' });
+    }
 
-module.exports = verifyAdmin;
+    const isPasswordValid = await bcrypt.compare(password, admin.password);
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    const token = jwt.sign(
+      { _id: admin._id, username: admin.username },
+      process.env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+
+    res.status(200).json({ token });
+  } catch (error) {
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+module.exports = router;

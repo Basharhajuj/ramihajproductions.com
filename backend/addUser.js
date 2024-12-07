@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const AdminUser = require('./models/adminUser'); // Update with the correct path
 
-mongoose.connect('mongodb://localhost:27017/RHdb', {
+mongoose.connect('mongodb+srv://basharhajuj:Bashar555Skoda@rhproductions.wgbkc.mongodb.net/', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(async () => {
@@ -14,7 +14,7 @@ mongoose.connect('mongodb://localhost:27017/RHdb', {
 
   // Create a new admin user
   const adminUser = new AdminUser({
-    username: 'Rami',
+    username: 'you',
     password: 123456,
     role: 'admin'
   });

@@ -28,13 +28,13 @@ export class AdminLoginComponent {
       const { username, password } = this.loginForm.value;
 
       this.adminAuthService.login(username, password).subscribe(
-        (response: any) => {
-          // Handle successful login (e.g., store token, redirect to admin dashboard)
+        (response) => {
+          console.log('Login successful:', response); // Log response for debugging
           localStorage.setItem('adminToken', response.token);
           this.router.navigate(['/admin']);
         },
         (error) => {
-          // Handle login error
+          console.error('Login failed:', error); // Log error for debugging
           this.errorMessage = 'Invalid username or password';
         }
       );

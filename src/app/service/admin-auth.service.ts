@@ -3,10 +3,10 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AdminAuthService {
-  private apiUrl = 'http://localhost:5000/api/login';
+  private apiUrl = 'http://localhost:5000/api/login'; // Backend login endpoint
 
   constructor(private http: HttpClient) {}
 
