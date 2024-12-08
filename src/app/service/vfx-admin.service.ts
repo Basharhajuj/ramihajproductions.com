@@ -2,12 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent, HttpEventType, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../environments/environment';
+
 
 @Injectable({
   providedIn: 'root',
 })
 export class VfxAdminService {
-  private apiUrl = 'http://localhost:5000/api/vfx'; // Backend API URL
+  private apiUrl = `${environment.apiUrl}/vfx`; // Backend API URL
 
   constructor(private http: HttpClient) {}
 
