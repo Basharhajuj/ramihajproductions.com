@@ -19,8 +19,8 @@ if (!process.env.JWT_SECRET) {
 
 // Middleware
 const allowedOrigins = [
-  'http://localhost:4200', // Local development
-  'https://ramihajproductions-cae02.firebaseapp.com/', // Replace with your deployed frontend URL
+  'http://localhost:4200', 
+  'https://ramihajproductions-cae02.firebaseapp.com/',
 ];
 
 const corsOptions = {
