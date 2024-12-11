@@ -47,6 +47,7 @@ body {
   overflow: hidden;
 }
 
+
 #myVideo {
    position: absolute;
   top: 0;
@@ -59,13 +60,25 @@ body {
 }
 
 .content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
 }
+
+.title {
+  font-size: 2.5rem;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeSlideUp 1s ease-in-out forwards;
+}
+
+.logo {
+  max-width: 500px;
+  height: auto;
+  animation-delay: 0.5s;
+  animation: fadeSlideUp 1s ease-in-out forwards;
+}
+
 .fullPageSwiper {
   width: 100%;
   height: 100vh; 
@@ -79,10 +92,7 @@ body {
 }
 
 
-.logo {
-  max-width: 500px;
-  height: auto;
-}
+
 #projects-carousel {
   height: 100vh;
   background-color: #000000;
@@ -322,5 +332,15 @@ body {
 @media (max-width: 480px) {
   .carousel-title {
     font-size: 1.5rem;
+  }
+}
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
