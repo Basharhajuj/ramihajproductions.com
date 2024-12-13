@@ -1,15 +1,22 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import Swiper from 'swiper';
 import { SwiperOptions } from 'swiper/types';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements AfterViewInit {
   @ViewChild('swiperProjects') swiperProjectsRef!: ElementRef;
   @ViewChild('swiperRef') swiperRef!: ElementRef;
+  @ViewChild('videoElement') videoElementRef!: ElementRef;
 
   private isScrolling = false;
   private scrollTimeout: any;
@@ -50,8 +57,8 @@ export class HomeComponent implements AfterViewInit {
     breakpoints: {
       1024: { slidesPerView: 3, spaceBetween: 30 },
       768: { slidesPerView: 2, spaceBetween: 20 },
-      0: { slidesPerView: 1, spaceBetween: 10 }
-    }
+      0: { slidesPerView: 1, spaceBetween: 10 },
+    },
   };
 
   sections: HTMLElement[] = [];
@@ -62,7 +69,7 @@ export class HomeComponent implements AfterViewInit {
     { name: 'Rami haj', role: 'Art Director', imageUrl: 'assets/VFX1.png', detailsVisible: false },
     { name: 'Adham haj', role: 'Photographer', imageUrl: 'assets/VFX3.jpg', detailsVisible: false },
     { name: 'Anas hija', role: 'CGI builder', imageUrl: 'assets/VFX3.jpg', detailsVisible: false },
-    { name: 'Bashar hajuj', role: 'Software engineer', imageUrl: 'assets/VFX3.jpg', detailsVisible: false }
+    { name: 'Bashar hajuj', role: 'Software engineer', imageUrl: 'assets/VFX3.jpg', detailsVisible: false },
   ];
 
   ngAfterViewInit(): void {
@@ -73,7 +80,17 @@ export class HomeComponent implements AfterViewInit {
     if (this.swiperRef) {
       new Swiper(this.swiperRef.nativeElement, this.teamConfig);
     }
+
     this.sections = Array.from(document.querySelectorAll('section'));
+
+    // Handle video autoplay and muted programmatically
+    if (this.videoElementRef) {
+      const video = this.videoElementRef.nativeElement as HTMLVideoElement;
+      video.muted = true;
+      video.play().catch((error) => {
+        console.error('Video playback failed:', error);
+      });
+    }
   }
 
   @HostListener('window:wheel', ['$event'])
