@@ -221,6 +221,15 @@
 }
 
 /* Responsive adjustments */
+
+.d-none-mobile {
+  display: block; // Default display
+
+  @media (max-width: 768px) {
+    display: none; // Hide logo on mobile
+  }
+}
+
 @media (max-width: 768px) {
   .navbar-links a {
     font-size: 1rem;
@@ -231,7 +240,8 @@
   }
 
   .navbar-links {
-    margin-right: 0%;
+    margin-left: 0%;
+    margin-top: 5%;
   }
 
   .menu {
